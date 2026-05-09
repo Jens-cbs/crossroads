@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crossroads KBH</title>
+    <meta charset="UTF-8">
+
+    <style>
+        body {
+            background:#222;
+            color:white;
+            font-family: 'Franklin Gothic book';
+            margin: 0;
+        }
+
+        #navBar_id {
+            background:white;
+            color:black;
+            width:100%;
+            display:inline-block;
+        }
+
+        #navBar_id a {
+            margin:2%;
+            text-decoration:none;
+            color:gray;
+            vertical-align: middle;
+        }
+
+        #pageContent_id {
+            display:flex;
+            align-items:flex-start;
+            margin:0.5%;
+        }
+
+        #afstemningContainer_id {
+            background:white;
+            width:90%;
+            height:70vh;
+            margin-top:1%;
+            margin-left:3%;
+            overflow:auto;
+            padding: 0%;
+        }
+
+        #afstemningContainer_id div {
+            background:white;
+            color:black;
+        }
+
+        #opretAfstemning_id {
+            font-family:'Franklin Gothic book';
+            background:lightgray;
+            border:none;
+            padding:1%;
+            margin:3.5% 0 0 3%;
+            width:25%;
+        }
+
+        #opretAfstemning_id:hover {
+            cursor:pointer;
+        }
+
+        #wizardContainer_id, #detailContainer_id {
+            background:white;
+            color:black;
+            padding:10px;
+            overflow:auto;
+            margin-top: 1%;
+            margin-left: 1%;
+            
+        }
+        #wizardContainer_id{
+            height: 60vh;
+            width: 40%;
+            position: relative;
+        }
+        #detailContainer_id{
+            margin-top: 3.65%;
+            height: 66.8vh;
+            overflow: scroll;
+            position: relative;
+        }
+        .lukBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: lightgray;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.wizardNav {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Tilbage knap */
+.tilbageBtn {
+    background: white;
+    border: 2px solid blue;
+    color: blue;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+/* Næste / Opret knap */
+.naesteBtn {
+    background: green;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+input, textarea, select {
+    width: 70%;
+    padding: 4px;
+    margin-top: 5px;
+    border: 1px solid lightgray;
+    outline: none;
+    font-family: 'Franklin Gothic book';
+}
+
+/* Fjern blå outline ved fokus og giv evt. lidt feedback */
+input:focus, textarea:focus, select:focus {
+    border: 1px solid gray;
+}
+
+#detailContainer_id p,
+#detailContainer_id span,
+#detailContainer_id div {
+    font-size: 85%;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div id="navBar_id">
+        <a href=""><img src="CROSSROADS_LOGO.avif" width="16%"></a>
+        <a href="">Hjem</a>
+        <a href="">Om</a>
+        <a href="">Aktiviteter</a>
+        <a href="">Kontakt</a>
+    </div>
+</header>
+
+<div id="pageContent_id">
+
+    <!-- WIZARD -->
+    <div id="wizardContainer_id" style="display:none;">
+
+    </div>
+
+    <!-- LISTE -->
+    <div style="width:40%;">
+        <button id="opretAfstemning_id">Opret afstemning</button>
+        <div id="afstemningContainer_id">
+            <center>
+                <p style="color:#222">Ingen afstemninger oprettet</p>
+            </center>
+        </div>
+    </div>
+
+    <!-- DETALJER -->
+    <div id="detailContainer_id" style="width:30%; display:none;"></div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="dom.js"></script>
+
+
+</body>
+</html>
